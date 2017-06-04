@@ -4,7 +4,7 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 # Updated the documentation
-node.deafult['haproxy']['members'] = [
+node.default['haproxy']['members'] = [
  {
    "hostname" => 'web1',
    "ipaddress" => '192.168.10.43',
