@@ -4,6 +4,7 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 # Updated the documentation
+#test
 node.default['haproxy']['members'] = [
  {
    "hostname" => 'web1',
