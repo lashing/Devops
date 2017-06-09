@@ -154,7 +154,7 @@ resource "aws_security_group" "appinstance-sg" {
 
 #Create Web Instance
 resource "aws_instance" "web" {
-  ami           = "ami-6f68cf0f"
+  ami           = "ami-f9626b80"
   instance_type = "t2.micro"
   subnet_id = "subnet-4c8ad22b"
   associate_public_ip_address = "true"

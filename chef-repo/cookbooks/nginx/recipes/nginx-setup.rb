@@ -9,6 +9,13 @@ end
 package 'nginx' do
 end
 
+template '/etc/nginx/conf.d/default.conf' do
+  source 'default.conf.erb'
+  mode '0755'
+  owner 'root'
+  group 'root'
+end
+
 service 'nginx' do
 action [ :enable, :start]
 end

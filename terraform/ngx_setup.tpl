@@ -1,5 +1,6 @@
 #!/bin/bash 
-yum install -y wget
+suod yum install -y wget
+sudo rm -f /etc/chef/client.pem
 curl -L https://www.opscode.com/chef/install.sh | sudo bash -s -- -v 12.20 
 sudo mkdir -p /var/log/chef 
 sudo mkdir -p /var/backups/chef 
