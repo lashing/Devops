@@ -8,7 +8,7 @@ sudo mkdir -p /var/run/chef
 sudo mkdir -p /var/cache/chef 
 sudo mkdir -p /var/lib/chef 
 sudo mkdir /etc/chef 
-sudo wget https://s3-us-west-2.amazonaws.com/chef-lashing/bootstrap.json -O 	/etc/chef/bootstrap.json
+sudo wget https://s3-us-west-2.amazonaws.com/chef-lashing/bootstrap_v1.json -O 	/etc/chef/bootstrap.json
 sudo wget https://s3-us-west-2.amazonaws.com/chef-lashing/client.rb -O /etc/chef/client.rb
 sudo wget https://s3-us-west-2.amazonaws.com/chef-lashing/validation.pem -O /etc/chef/validation.pem
 sudo /usr/bin/chef-client -j /etc/chef/bootstrap.json
