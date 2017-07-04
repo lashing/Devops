@@ -6,7 +6,7 @@ server {
     #access_log  /var/log/nginx/log/host.access.log  main;
 
     location / {
-        proxy_pass http://internal-App-internal-elb-1-1889876117.us-west-2.elb.amazonaws.com:8080;
+        proxy_pass http://internal-App-internal-elb-1-1889876117.us-west-2.elb.amazonaws.com:8081;
     }
 
     #error_page  404              /404.html;

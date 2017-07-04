@@ -36,9 +36,9 @@ resource "aws_elb" "app" {
   internal = "true"
 
   listener {
-    instance_port     = 8080
+    instance_port     = 8081
     instance_protocol = "http"
-    lb_port           = 8080
+    lb_port           = 8081
     lb_protocol       = "http"
   }
 
@@ -46,7 +46,7 @@ resource "aws_elb" "app" {
     healthy_threshold   = 2
     unhealthy_threshold = 2
     timeout             = 3
-    target              = "HTTP:8080/"
+    target              = "HTTP:8081/"
     interval            = 30
   }
 
