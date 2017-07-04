@@ -171,7 +171,7 @@ resource "aws_instance" "app" {
   ami           = "ami-6cc84a0c"
   subnet_id = "subnet-e3792284"
   instance_type = "t2.micro"
-  associate_public_ip_address = "false"
+  associate_public_ip_address = "true"
   vpc_security_group_ids = ["${aws_security_group.appinstance-sg.id}"]
   key_name = "web-dev"
   tags {
