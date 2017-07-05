@@ -173,6 +173,7 @@ resource "aws_instance" "app" {
   instance_type = "t2.micro"
   associate_public_ip_address = "true"
   vpc_security_group_ids = ["${aws_security_group.appinstance-sg.id}"]
+  user_data = "${data.template_file.nodejsinit.rendered}"
   key_name = "web-dev"
   tags {
     Name = "Wed-dev-app1"
@@ -196,5 +197,11 @@ data "template_file" "ngxinit" {
   template = "${file("ngx_setup.tpl")}"
   vars {
     cluster = "nginx"
+  }
+}
+data "template_file" "nodejsinit" {
+  template = "${file("nodejs_setup.tpl")}"
+  vars {
+    cluster = "nodejs"
   }
 }
